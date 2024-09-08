@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 40px;
+}
+/* mobile first rules */
+.top-banner {
+  padding: 10px;
+  background-color: blue;
+
+  .page-title {
+    background-color: pink;
+  }
+
+  .buttons {
+  }
+}
+
+.controls {
+    padding: 10px;
+    background-color: yellow;
+}
+
+main {
+  padding: 0;
+  background-color: red;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* screen rules */
+@media only screen and (min-width: 769px) {
+  .top-banner {
+    .page-title {
+      width: 29%;
+      display: inline-block;
+    }
+
+    .buttons {
+      width: 70%;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
+  .controls {
+    padding: 10px;
+    background-color: yellow;
+    width: 29%;
+    height: 80vh;
+
+    vertical-align:top;
+    display: inline-block;
+
+  }
+
+  main {
+    /* padding: 10px; */
+    background-color: red;
+    width: 70%;
+    display: inline-block;
+
+    height: 80vh;
+
+    canvas {
+      width: 100%;
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+
+}
+
+
+/* very large screen */
+
+canvas {
+  /* max-width: 800px; */
+  /* height: auto; */
+  /* object-fit: contain; */
+  vertical-align: top;
+}
+
+
+
+
+
+
