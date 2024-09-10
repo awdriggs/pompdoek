@@ -149,5 +149,15 @@ function resetControls() {
   console.log('reset');
 //will be needed for the reset
   // slider1.elt.value = 0.2
-}
+  rightBoundrySlider.elt.value = 0.8;
+  bottomBoundrySlider.elt.value = 0.66;
+  mainW.elt.value = 0.2;
+  cornerW.elt.value = 0.2;
+  bottomW.elt.value = 0.7;
+  bottomH.elt.value = 0.03;
+  rightW.elt.value = 0.03;
+  rightH.elt.value = 0.4;
 
+  colorOneInput.elt.value = "#434f71"
+  colorTwoInput.elt.value = "#FFFFFF"
+}
