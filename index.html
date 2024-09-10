@@ -16,14 +16,35 @@
       <h1 class="page-title">Pompdoek</h1>
 
       <div class="buttons">
-        <button>reset</button> <button id="save">save</button>
+        <button id="reset">reset</button> <button id="save">save</button>
       </div>
     </header>
 
     <aside class="controls">
       <h2>controls</h2>
-      <label for="size">size</label><br />
-      <input id="circ-size" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <!-- <label for="size">size</label><br /> -->
+      <!-- <input id="circ-size" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider"> -->
+      <label for="right-boundry">right boundry</label><br>
+      <input id="right-boundry" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="bottom-boundry">bottom boundry</label><br>
+      <input id="bottom-boundry" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="main-columns">main columns</label><br>
+      <input id="main-columns" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="bottom-columns">bottom columns</label><br>
+      <input id="bottom-columns" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="bottom-rows">bottom rows</label><br>
+      <input id="bottom-rows" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="right-columns">right columns</label><br>
+      <input id="right-columns" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="right-rows">right rows</label><br>
+      <input id="right-rows" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+      <label for="corner-columns">corner columns</label><br>
+      <input id="corner-columns" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
+
+      <label for="body">Color 1</label>
+      <input type="color" id="color-1" name="color-1" value="#f6b73c" class="color"><br> 
+      <label for="color-2">Color 2</label>
+      <input type="color" id="color-2" name="color-2" value="#f6b73c" class="color">> 
     </aside>
 
     <main id="canvas-wrapper">
