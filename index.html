@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&amp;family=Handjet:wght@100..900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>
-  </title>
+  <title>pompdoek</title>
 </head>
 <body>
   <div id="page-wrapper">
@@ -14,24 +16,25 @@
       <h1 class="page-title">Pompdoek</h1>
 
       <div class="buttons">
-        <button>Reset</button> <button id="save">Save</button>
+        <button>reset</button> <button id="save">save</button>
       </div>
     </header>
 
     <aside class="controls">
-      controls
-      <input id="circ-size" type="range" min="1" max="200" value="50">
+      <h2>controls</h2>
+      <label for="size">size</label><br />
+      <input id="circ-size" name="size" type="range" min="0" max="1.0" step="0.01" value="0.5" class="slider">
     </aside>
 
     <main id="canvas-wrapper">
       <!-- <p>canvas</p> -->
     </main>
-
-    <footer>
-      <p><a href="https://adamdriggers.com">adam driggers</a> | 2024</p>
-    </footer>
-    <script src="sketch.js"></script>
   </div>
   <!-- end of page wrapper -->
+
+  <footer>
+    <p><a href="https://adamdriggers.com">adam driggers</a> | 2024</p>
+  </footer>
+  <script src="sketch.js"></script>
 </body>
 </html>

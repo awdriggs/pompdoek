@@ -14,7 +14,7 @@ function setup(){
 
 function draw(){
   background(220);
-  let s = slider1.value();
+  let s = map(slider1.value(), 0, 1, 10, height);
   ellipse(width/2, height/2, s, s);
 }
 

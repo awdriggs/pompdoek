@@ -1,40 +1,138 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
 
   margin-bottom: 40px;
+
+  /* font */
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: #7085bd;
+  color: #434f71;
 }
+
+
 /* mobile first rules */
+#page-wrapper {
+  /* height: 90vh; */
+}
+
 .top-banner {
   padding: 10px;
-  background-color: blue;
+  /* background-color: blue; */
 
   .page-title {
-    background-color: pink;
+    /* background-color: pink; */
+    background-color: #7085bd;
+    font-family: "Handjet", sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    margin: 0;
+    color: #FFF;
+    letter-spacing: 10px;
+    text-align: center;
   }
 
   .buttons {
+    vertical-align: top;
+    text-align: center;
+    margin-top: 20px;
+    /* * vertical-align: middle; */
+
+
+    button{
+      font-size: 1.5rem;
+      /* color: red; */
+      background: #E8E8E8;
+      background-image: linear-gradient(#c5cee4, #8c9dca );
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px 10px 30px;
+      /* border: solid 1px #434f71; */
+      color: #434f71;
+/* try this for animation? */
+      /* https://stackoverflow.com/questions/37909841/css-smooth-button-gradient-color-transition-on-hover */
+      /* -webkit-animation: Gradient 5s ease infinite; */
+      /* -moz-animation: Gradient 5s ease infinite; */
+      /* animation: Gradient 5s ease infinite; */
+    }
+    button:hover {
+      /* background-image: linear-gradient(#8c9dca, #c5cee4); */
+      animation: Gradient 5s ease infinite;
+    }
   }
 }
 
 .controls {
-    padding: 10px;
-    background-color: yellow;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .slider {
+    margin-top: 10px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #c5cee4;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 8px;
+  }
+
+  .slider:hover {
+    opacity: 1;
+    border: none;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    /* background: #04AA6D; */
+    /* background: #434f71; */
+      background-image: linear-gradient(#8c9dca, #434f71 );
+    cursor: pointer;
+    border: none;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    /* background: #04AA6D; */
+    /* background: #434f71; */
+      background-image: linear-gradient(#8c9dca, #434f71 );
+    cursor: pointer;
+    border: none;
+  }
 }
 
 main {
   padding: 0;
-  background-color: red;
+  /* background-color: red; */
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
+
+  a, a:visited {
+    color: #434f71;
+  }
+  a:hover {
+    color: #FFF;
+  }
 }
 
 
@@ -47,47 +145,36 @@ footer {
     }
 
     .buttons {
-      width: 70%;
+      width: 69%;
       display: inline-block;
       text-align: right;
     }
   }
 
   .controls {
-    padding: 10px;
-    background-color: yellow;
+    padding: 0 20px;
     width: 29%;
-    height: 80vh;
 
     vertical-align:top;
     display: inline-block;
+
+    h2 {
+      margin: 0 0 20px 0;
+    }
 
   }
 
   main {
     /* padding: 10px; */
-    background-color: red;
-    width: 70%;
+    width: 69%;
     display: inline-block;
 
-    height: 80vh;
 
     canvas {
       width: 100%;
     }
   }
-
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-
 }
-
-
 /* very large screen */
 
 canvas {
@@ -97,8 +184,20 @@ canvas {
   vertical-align: top;
 }
 
+/* animations */
 
-
-
-
+@-webkit-keyframes Gradient {
+  0%{background-image: linear-gradient(#c5cee4,#8c9dca )}
+  100%{background-image: linear-gradient(#8c9dca, #c5cee4)}
+}
+@-moz-keyframes Gradient {
+  0%{background-image: linear-gradient(#c5cee4,#8c9dca )}
+  100%{background-image: linear-gradient(#8c9dca, #c5cee4)}
+}
+@keyframes Gradient {
+  0%{background-image: linear-gradient(#c5cee4,#8c9dca )}
+  100%{background-image: linear-gradient(#8c9dca, #c5cee4)}
+  /* 0%{background-position:10% 0%} */
+  /* 50%{background-position:91% 100%} */
+}
 
