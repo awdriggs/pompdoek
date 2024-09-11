@@ -147,7 +147,6 @@ function assignControls() {
 
 function resetControls() {
   console.log('reset');
-//will be needed for the reset
   // slider1.elt.value = 0.2
   rightBoundrySlider.elt.value = 0.8;
   bottomBoundrySlider.elt.value = 0.66;
